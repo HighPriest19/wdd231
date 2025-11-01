@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 231 Home Page for Hinckley Olagunju">
-  <meta name="author" content="Hinckley Olagunju">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ Improved meta description -->
+  <meta name="description" content="Home page for Hinckley Olagunju, a BYU-Idaho WDD 231 student learning responsive front-end web development and building professional portfolio projects." />
+  <meta name="author" content="Hinckley Olagunju" />
+
   <title>WDD 231 | Hinckley Olagunju</title>
 
-  <!-- Fonts + Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ✅ Proper preconnects + Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Only two CSS files -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- ✅ Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -38,19 +45,27 @@
   </header>
 
   <main>
+    <!-- ✅ 1st section -->
     <section class="about">
       <h2>About Me</h2>
       <p>Hello! I'm Hinckley Olagunju from Ondo, Nigeria. I’m a web developer learning modern front-end design and responsive layouts in WDD 231.</p>
-      <img src="images/profile.jpeg" alt="Photo of Hinckley Olagunju">
+      <img src="images/profile.jpeg" alt="Photo of Hinckley Olagunju" />
     </section>
 
+    <!-- ✅ 2nd section -->
     <section class="courses">
       <h2>Web Development Certificate Courses</h2>
       <ul id="courseList">
-        <li>WDD 130 - Web Fundamentals</li>
-        <li>WDD 131 - Dynamic Web Fundamentals</li>
-        <li>WDD 231 - Frontend Web Development</li>
+        <li>WDD 130 – Web Fundamentals</li>
+        <li>WDD 131 – Dynamic Web Fundamentals</li>
+        <li>WDD 231 – Frontend Web Development</li>
       </ul>
+    </section>
+
+    <!-- ✅ 3rd section added -->
+    <section class="goals">
+      <h2>My Learning Goals</h2>
+      <p>I aim to strengthen my understanding of responsive web design, improve my JavaScript skills, and create a professional developer portfolio by the end of this semester.</p>
     </section>
   </main>
 
