@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 Home Page for Hinckley Olagunju">
+  <meta name="author" content="Hinckley Olagunju">
+  <title>WDD 231 | Hinckley Olagunju</title>
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-gem"></i>
+      <h1>Hinckley Olagunju</h1>
+    </div>
+    <button id="menu-toggle" aria-label="menu" aria-expanded="false">☰</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber-site-plan.html">Chamber Project</a></li>
+        <li><a href="chamber-description.html">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Hinckley Olagunju from Ondo, Nigeria. I’m a web developer learning modern front-end design and responsive layouts in WDD 231.</p>
+      <img src="images/profile.jpeg" alt="Photo of Hinckley Olagunju">
+    </section>
+
+    <section class="courses">
+      <h2>Web Development Certificate Courses</h2>
+      <ul id="courseList">
+        <li>WDD 130 - Web Fundamentals</li>
+        <li>WDD 131 - Dynamic Web Fundamentals</li>
+        <li>WDD 231 - Frontend Web Development</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://github.com/highpriest19" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://facebook.com/hinckley.codm" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/hinckleyweb3" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://wa.me/2349043110269" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; <span id="currentYear"></span> Hinckley Olagunju | Ondo, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+</body>
+</html>

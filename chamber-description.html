@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber Description | Hinckley Olagunju</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KY4c9T4n3z3oY5U6k1X0tX5A+F1HZ7v7pFbbzXYkPzZ6S7vvxG9s3TkL+l3qM4F6QSPM+zBixr4sZ2wQzW8H1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+<a href="index.html" class="back-btn">← Back to Home</a>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <i class="fas fa-gem logo"></i>
+      <h1>Ondo Chamber of Commerce</h1>
+    </div>
+    <nav class="social-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-box">
+      <h2>Chamber Project Description</h2>
+      <h3>Overview</h3>
+      <p>This website will serve as the official online presence of the Ondo Chamber of Commerce, promoting community events, member businesses, and opportunities for networking.</p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Home page with hero image and call to action</li>
+        <li>Directory of member businesses</li>
+        <li>Join form for new members</li>
+        <li>Weather integration and dynamic updates</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Hinckley Olagunju</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
