@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Hinckley Medical Center",
+        "tagline": "Excellence in Community Healthcare",
+        "address": "12 Oke Aro Street, Akure, Ondo State",
+        "phone": "+234 803 456 1122",
+        "email": "info@hinckleymedical.ng",
+        "website": "https://www.hinckleymedical.ng",
+        "image": "images/medical.webp",
+        "membershipLevel": 3,
+        "industry": "Healthcare",
+        "yearJoined": 2020
+    },
+    {
+        "name": "Olagunju & Co Consulting",
+        "tagline": "Empowering Growth Through Strategy",
+        "address": "25 Arakale Road, Akure, Ondo State",
+        "phone": "+234 805 765 3344",
+        "email": "contact@olagunjucoltd.com",
+        "website": "https://www.olagunjucoltd.com",
+        "image": "images/consulting.webp",
+        "membershipLevel": 3,
+        "industry": "Consulting",
+        "yearJoined": 2018
+    },
+    {
+        "name": "Ondo Tech Innovations",
+        "tagline": "Building the Future with Code",
+        "address": "4 FUTA South Gate, Akure, Ondo State",
+        "phone": "+234 807 890 5566",
+        "email": "support@ondotech.ng",
+        "website": "https://www.ondotech.ng",
+        "image": "images/tech.webp",
+        "membershipLevel": 2,
+        "industry": "Technology",
+        "yearJoined": 2021
+    },
+    {
+        "name": "Green Harvest Farms",
+        "tagline": "Feeding the Nation Sustainably",
+        "address": "Mile 7 Akure-Owo Road, Ondo State",
+        "phone": "+234 806 234 7788",
+        "email": "sales@greenharvest.ng",
+        "website": "https://www.greenharvest.ng",
+        "image": "images/farm.webp",
+        "membershipLevel": 2,
+        "industry": "Agriculture",
+        "yearJoined": 2019
+    },
+    {
+        "name": "Akure Fashion House",
+        "tagline": "Where Style Meets Culture",
+        "address": "19 Oba Adesida Road, Akure, Ondo State",
+        "phone": "+234 809 345 6677",
+        "email": "hello@akurefashion.ng",
+        "website": "https://www.akurefashion.ng",
+        "image": "images/fashion.webp",
+        "membershipLevel": 1,
+        "industry": "Retail",
+        "yearJoined": 2023
+    },
+    {
+        "name": "The Palm Restaurant & Lounge",
+        "tagline": "Taste Ondo. Taste Perfection.",
+        "address": "Opp. Cathedral Junction, Akure, Ondo State",
+        "phone": "+234 808 456 9988",
+        "email": "reservations@thepalm.ng",
+        "website": "https://www.thepalm.ng",
+        "image": "images/lounge.webp",
+        "membershipLevel": 2,
+        "industry": "Hospitality",
+        "yearJoined": 2020
+    },
+    {
+        "name": "Sunshine Suites & Hotel",
+        "tagline": "Luxury in the Heart of Ondo",
+        "address": "No. 7 Oyemekun Road, Akure, Ondo State",
+        "phone": "+234 810 567 8877",
+        "email": "info@sunshinesuites.ng",
+        "website": "https://www.sunshinesuites.ng",
+        "image": "images/hotel.webp",
+        "membershipLevel": 4,
+        "industry": "Hospitality",
+        "yearJoined": 2017
+    },
+    {
+        "name": "Prestige Motors Akure",
+        "tagline": "Your Journey Starts Here",
+        "address": "102 Ondo Road, Akure, Ondo State",
+        "phone": "+234 811 678 5544",
+        "email": "sales@prestigemotors.ng",
+        "website": "https://www.prestigemotors.ng",
+        "image": "images/motors.webp",
+        "membershipLevel": 3,
+        "industry": "Automotive",
+        "yearJoined": 2019
+    },
+    {
+        "name": "Royal Credit & Microfinance",
+        "tagline": "Empowering Entrepreneurs Daily",
+        "address": "14 Cathedral Avenue, Akure, Ondo State",
+        "phone": "+234 812 789 3344",
+        "email": "info@royalcredit.ng",
+        "website": "https://www.royalcredit.ng",
+        "image": "images/microfinance.webp",
+        "membershipLevel": 2,
+        "industry": "Financial Services",
+        "yearJoined": 2021
+    }
+]

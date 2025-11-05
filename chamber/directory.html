@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ondo Commerce Hub - Empowering Businesses Across Ondo State. Discover enterprises, networking opportunities, and local economic growth resources.">
+    <meta name="author" content="Hinckley Olagunju">
+    
+    <!-- Open Graph (for social media sharing) -->
+    <meta property="og:title" content="Ondo Commerce Hub - Business Directory">
+    <meta property="og:description" content="Explore member businesses of Ondo Commerce Hub. From agriculture to tech innovation, discover thriving local enterprises across Ondo State.">
+    <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/och-logo.png">
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    
+    <title>Business Directory - Ondo Commerce Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/ondo.webp" alt="Ondo Commerce Hub Logo" class="logo" loading="lazy"> 
+                <div class="logo-text">
+                    <h1>Ondo Commerce Hub</h1>
+                    <p class="tagline">Empowering Business Growth</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Change theme">
+                    🌓
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="directory-container">
+            <div class="directory-header">
+                <h2>Member Directory</h2>
+                <div class="view-controls">
+                    <button id="gridBtn" class="view-btn active" aria-label="Grid view">⊞</button>
+                    <button id="listBtn" class="view-btn" aria-label="List view">☰</button>
+                </div>
+            </div>
+
+            <div id="memberDirectory" class="member-grid">
+                <!-- Directory content loads dynamically here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Ondo Commerce Hub</h3>
+                <p>📍 45 Oba Adesida Road, Akure, Ondo State</p>
+                <p>📞 +234 806 456 7890</p>
+                <p>✉ info@ondocommercehub.org</p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hinckleyolagunju" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                    </a>
+                    <a href="https://x.com/hinckleweb3" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                        <img src="images/twitter-x.svg" alt="X (Twitter)" width="32" height="32">
+                    </a>
+                    <a href="https://www.instagram.com/hinckley.codm" target="_blank" rel="noopener" aria-label="Instagram">
+                        <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section project-info">
+                <p><strong>WDD 231 Class Project</strong></p>
+                <p>Hinckley Olagunju</p>
+                <p>&copy; <span id="currentYear"></span> Ondo Commerce Hub</p>
+                <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+</body>
+</html>
