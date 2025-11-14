@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ondo Commerce Hub - Empowering businesses across Ondo State. Join our thriving business community and grow your enterprise.">
+    <meta name="author" content="Hinckley Olagunju">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ondo Commerce Hub - Home">
+    <meta property="og:description" content="Join the Ondo Commerce Hub. Connect with businesses, access networking opportunities, and drive economic growth across Ondo State.">
+    <meta property="og:image" content="images/business-hero.webp">
+    <meta property="og:url" content="https://highpriest19.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    
+    <title>Home - Ondo Commerce Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/och-logo.png" alt="Ondo Commerce Hub Logo" class="logo" loading="lazy"> 
+                <div class="logo-text">
+                    <h1>Ondo Commerce Hub</h1>
+                    <p class="tagline">Empowering Business Growth</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Change theme">🌓</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <img src="images/business-hero.webp" alt="Ondo business professionals networking" class="hero-image">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>Welcome to Ondo Commerce Hub</h2>
+                    <p>Supporting entrepreneurs, empowering growth, and building a stronger future for Ondo State businesses.</p>
+                    <a href="join.html" class="cta-button">Join the Chamber</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="home-container">
+
+            <!-- Three Column Section: Events | Current Weather | Weather Forecast -->
+            <div class="info-grid">
+
+                <!-- Events Section -->
+                <section class="info-card events-card">
+                    <h3>Events</h3>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <h4>Ondo Business Networking Summit</h4>
+                            <p class="event-date">📅 December 15, 2024</p>
+                            <p class="event-time">⏰ 6:00 PM - 9:00 PM</p>
+                            <p class="event-location">📍 Akure Civic Centre</p>
+                        </div>
+
+                        <div class="event-item">
+                            <h4>Digital Skills Bootcamp</h4>
+                            <p class="event-date">📅 December 22, 2024</p>
+                            <p class="event-time">⏰ 10:00 AM - 2:00 PM</p>
+                            <p class="event-location">📍 Tech Hub Akure</p>
+                        </div>
+
+                        <div class="event-item">
+                            <h4>New Year Business Leaders Breakfast</h4>
+                            <p class="event-date">📅 January 5, 2025</p>
+                            <p class="event-time">⏰ 7:00 AM - 9:00 AM</p>
+                            <p class="event-location">📍 Sunview Hotel, Alagbaka</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Current Weather Section -->
+                <section class="info-card weather-current-card">
+                    <h3>Current Weather</h3>
+                    <div class="current-weather-content">
+                        <div class="weather-main-display">
+                            <div class="weather-icon-wrapper">
+                                <img id="weatherIcon" src="images/och-logo.png" alt="Weather icon" class="weather-icon-large">
+                            </div>
+                            <div class="weather-info">
+                                <div class="temperature-large" id="currentTemp">--°F</div>
+                                <p class="weather-description-main" id="weatherDescription">Loading...</p>
+                            </div>
+                        </div>
+                        <div class="weather-details-list">
+                            <p><strong>High:</strong> <span id="highTemp">--°F</span></p>
+                            <p><strong>Low:</strong> <span id="lowTemp">--°F</span></p>
+                            <p><strong>Humidity:</strong> <span id="humidity">--%</span></p>
+                            <p><strong>Sunrise:</strong> <span id="sunrise">--:--</span></p>
+                            <p><strong>Sunset:</strong> <span id="sunset">--:--</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weather Forecast Section -->
+                <section class="info-card weather-forecast-card">
+                    <h3>Weather Forecast</h3>
+                    <div class="forecast-list" id="forecastList">
+                        <!-- Forecast will be filled by JS -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Member Spotlights -->
+            <section class="spotlights-section">
+                <h2 class="spotlights-title">Featured Members</h2>
+                <div class="spotlights-grid" id="spotlightsGrid">
+                    <!-- JS will load members -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Ondo Commerce Hub</h3>
+                <p>📍 45 Oba Adesida Road, Akure, Ondo State</p>
+                <p>📞 <a href="tel:+2348064567890">+234 806 456 7890</a></p>
+                <p>✉ <a href="mailto:info@ondocommercehub.org">info@ondocommercehub.org</a></p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+
+                    <a href="https://www.linkedin.com/in/hinckleyolagunju" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                    </a>
+
+                    <a href="https://x.com/hinckleweb3" target="_blank" aria-label="X (Twitter)">
+                        <img src="images/twitter-x.svg" alt="Twitter" width="32" height="32">
+                    </a>
+
+                    <a href="https://www.instagram.com/hinckley.codm" target="_blank" aria-label="Instagram">
+                        <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="footer-section project-info">
+                <p><strong>WDD 231 Class Project</strong></p>
+                <p>Hinckley Olagunju</p>
+                <p>&copy; <span id="currentYear"></span> Ondo Commerce Hub</p>
+                <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
