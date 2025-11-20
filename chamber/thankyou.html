@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Ondo Commerce Hub.">
+    <meta name="author" content="Hinckley Olagunju">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ondo Commerce Hub - Thank You">
+    <meta property="og:description" content="Your application has been successfully submitted.">
+    <meta property="og:image" content="https://highpriest19.github.io/wdd231/chamber/images/business-hero.webp">
+    <meta property="og:url" content="https://highpriest19.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <title>Thank You - Ondo Commerce Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/och-logo.png" alt="Ondo Commerce Hub Logo" class="logo" loading="lazy">
+                <div class="logo-text">
+                    <h1>Ondo Commerce Hub</h1>
+                    <p class="tagline">Empowering Business Growth</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Change theme">🌓</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="thankyou-container">
+            <h2 class="page-title">🎉 Application Submitted Successfully!</h2>
+            <p>Thank you for submitting your membership application to the Ondo Commerce Hub. We are excited to review your information and welcome you to our community.</p>
+            <p>A representative will contact you within <strong>3-5 business days</strong> to confirm your details and guide you through the next steps.</p>
+
+            <section class="submitted-data-card info-card">
+                <h3>Application Summary</h3>
+                <div id="form-data-display">
+                    <p>The information below was successfully received:</p>
+                    <!-- You can dynamically insert form data here -->
+                </div>
+            </section>
+
+            <a href="index.html" class="cta-button back-to-home-btn">Return to Home Page</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Ondo Commerce Hub</h3>
+                <p>📍 45 Oba Adesida Road, Akure, Ondo State</p>
+                <p>📞 <a href="tel:+2348064567890">+234 806 456 7890</a></p>
+                <p>✉ <a href="mailto:info@ondocommercehub.org">info@ondocommercehub.org</a></p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hinckleyolagunju" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                    </a>
+                    <a href="https://x.com/hinckleweb3" target="_blank" aria-label="X (Twitter)">
+                        <img src="images/twitter-x.svg" alt="Twitter" width="32" height="32">
+                    </a>
+                    <a href="https://www.instagram.com/hinckley.codm" target="_blank" aria-label="Instagram">
+                        <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section project-info">
+                <p><strong>WDD 231 Class Project</strong></p>
+                <p>Hinckley Olagunju</p>
+                <p>&copy; <span id="currentYear"></span> Ondo Commerce Hub</p>
+                <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

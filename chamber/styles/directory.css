@@ -1,20 +1,18 @@
-/* ===== 1. VARIABLES & RESET ===== */
-
 :root{
-  --color-primary-dark: #0B3D91;      /* Deep blue */
-  --color-nav-hover: #145DA0;         /* Slightly lighter blue */
-  --color-accent: #0A9396;            /* Teal accent */
-  --color-light-bg: #E6F0FA;          /* Light background */
-  --color-dark-bg: #121212;           /* Dark mode background */
-  --color-secondary-dark: #1E1E1E;    /* Dark card background */
-  --color-light-text: #FFFFFF; 
-  --color-dark-text: #111111;
-  --color-light-gray: #F8F9FA;        /* Light card background */
-  --color-dark-gray: #444444;
-  --color-dark-mode-primary: #78C0E0; /* Headings/highlights in dark mode */
-  --color-toggle-hover-light: #145DA0;
-  --color-label-text: #555555;
-  --color-label-text-dark: #B0B0B0;
+  --color-primary-dark:#1B263B;        /* darker/nav/header color */
+  --color-nav-hover:#415A77;           /* nav link hover */
+  --color-accent:#778DA9;              /* buttons, highlights */
+  --color-light-bg:#F0F4F8;            /* page background */
+  --color-dark-bg:#121212;             /* dark mode background */
+  --color-secondary-dark:#2E4057;      /* dark cards/bg */
+  --color-light-text:#FFFFFF;          /* light text */
+  --color-dark-text:#1B263B;           /* main text color */
+  --color-light-gray:#E4E9F0;          /* card bg, forms */
+  --color-dark-gray:#667292;           /* secondary text */
+  --color-dark-mode-primary:#778DA9;   /* dark mode main text */
+  --color-toggle-hover-light:#415A77;  /* theme toggle hover */
+  --color-label-text:#5D6D7E;          /* form labels */
+  --color-label-text-dark:#AAB2BD;     /* dark mode labels */
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -283,10 +281,7 @@ footer{
 .spotlights-title{font-size:2rem;color:var(--color-primary-dark);margin-bottom:2rem;text-align:center}
 
 .spotlights-grid{display: grid;grid-template-columns: repeat(3, 1fr);gap: 1.5rem}
-.spotlight-card {
-    display: block; /* or flex/grid as needed */
-    margin: 10px;
-}
+.spotlight-card{padding:1.5rem;display:flex;flex-direction:column;gap:1rem;}
 .spotlight-header{text-align:center;padding-bottom:1rem;border-bottom:2px solid #E0E0E0}
 .spotlight-name{font-size:1.2rem;color:var(--color-primary-dark);font-weight:700;margin:0 0 .5rem 0}
 .spotlight-tagline{font-size:.9rem;color:var(--color-dark-text);font-weight:600;margin:0}
@@ -471,4 +466,555 @@ body.dark-mode a:hover {
 @media(min-width:769px) and (max-width:1024px){
   .info-grid{grid-template-columns:1fr;gap:1.5rem}
   .spotlights-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+
+/* W04 JOIN & THANK YOU PAGE STYLES */
+
+
+/* ===== JOIN PAGE HERO SECTION ===== */
+.join-hero-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.join-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.join-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,51,102,0.7) 0%, rgba(0,51,102,0.4) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.join-hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.join-hero-content .page-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #000000;
+    background-color: transparent;
+}
+
+.join-hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: #000000;
+}
+
+/* ===== FORM WRAPPER ===== */
+.join-form-section {
+    padding: 2rem;
+}
+
+/* ===== FIELDSET STYLING ===== */
+.form-section {
+    border: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.section-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-dark));
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Grid layout for form fields */
+.fieldset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+/* ===== FORM LABELS & INPUTS ===== */
+.form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-label.full-width {
+    grid-column: 1 / -1;
+}
+
+.label-text {
+    font-weight: 500;
+    color: var(--color-dark-text);
+    font-size: 0.95rem;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form select,
+.membership-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-light-bg);
+    color: var(--color-dark-text);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(0, 102, 102, 0.1);
+}
+
+.membership-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.error-hint {
+    font-size: 0.8rem;
+    color: var(--color-dark-gray);
+    margin-top: 0.25rem;
+}
+
+
+input:required:invalid:not(:placeholder-shown) {
+    border-left: 4px solid #FF0000;
+}
+
+input:required:valid {
+    border-left: 4px solid #28a745;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-button-container {
+    margin-top: 2rem;
+}
+
+.join-submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--color-primary-dark);
+    color: var(--color-light-text);
+    border: 2px solid var(--color-nav-hover);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-submit-btn:hover {
+    background-color: var(--color-nav-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,77,153,0.4);
+}
+
+/* ===== MEMBERSHIP LEVELS SIDEBAR ===== */
+.membership-levels-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-info-box {
+    padding: 2rem;
+}
+
+.section-heading-small {
+    font-size: 1.3rem;
+    color: var(--color-dark-mode-primary);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-dark));
+    margin: -2rem -2rem 1rem -2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px 10px 0 0;
+    font-weight: 700;
+}
+
+.section-intro {
+    font-size: 0.9rem;
+    color: var(--color-dark-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ===== MEMBERSHIP CARDS ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.membership-card {
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.membership-card h4 {
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.membership-card .modal-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.membership-card .modal-link:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* Animation delays */
+.card-grid .membership-card:nth-child(1) { animation-delay: 0.2s; }
+.card-grid .membership-card:nth-child(2) { animation-delay: 0.4s; }
+.card-grid .membership-card:nth-child(3) { animation-delay: 0.6s; }
+.card-grid .membership-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== JOIN PAGE LAYOUT ===== */
+.join-page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .join-page-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+
+.membership-modal {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0;
+    background-color: var(--color-light-gray);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.membership-modal h3 {
+    margin-top: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.membership-modal p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--color-dark-text);
+}
+
+.membership-modal ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+.membership-modal li {
+    margin-bottom: 0.5rem;
+    color: var(--color-dark-text);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-primary-dark);
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== THANK YOU PAGE ===== */
+.thankyou-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.submitted-data-card {
+    padding: 2rem;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.submitted-data-card h3 {
+    color: var(--color-dark-mode-primary);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-dark));
+    margin: -2rem -2rem 1.5rem -2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px 10px 0 0;
+    font-weight: 700;
+}
+
+.submitted-data-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.submitted-data-card li {
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--color-dark-gray);
+    font-size: 1.05rem;
+    color: var(--color-dark-text);
+}
+
+.submitted-data-card li:last-child {
+    border-bottom: none;
+}
+
+.submitted-data-card li strong {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    display: inline-block;
+    min-width: 150px;
+}
+
+.back-to-home-btn {
+    margin-top: 1.5rem;
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+body.dark-mode .join-form-section,
+body.dark-mode .membership-info-box,
+body.dark-mode .membership-card {
+    background-color: var(--color-secondary-dark);
+}
+
+body.dark-mode .label-text {
+    color: var(--color-label-text-dark);
+}
+
+body.dark-mode .membership-form input:not([type="submit"]),
+body.dark-mode .membership-form select,
+body.dark-mode .membership-form textarea {
+    background-color: var(--color-secondary-dark);
+    border-color: var(--color-dark-gray);
+    color: var(--color-light-text);
+}
+
+body.dark-mode .error-hint {
+    color: var(--color-label-text-dark);
+}
+
+body.dark-mode .section-intro {
+    color: #E0E0E0;
+}
+
+body.dark-mode .membership-card h4 {
+    color: var(--color-dark-mode-primary);
+}
+
+body.dark-mode .membership-card .modal-link {
+    color: var(--color-dark-bg);
+    border-color: var(--color-light-text);
+}
+
+body.dark-mode .membership-card .modal-link:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-dark);
+}
+
+body.dark-mode .membership-modal {
+    background-color: var(--color-secondary-dark);
+    border-color: var(--color-dark-gray);
+}
+
+body.dark-mode .membership-modal h3 {
+    color: var(--color-dark-mode-primary);
+}
+
+body.dark-mode .membership-modal p,
+body.dark-mode .membership-modal li {
+    color: #E0E0E0;
+}
+
+body.dark-mode .close-modal {
+    color: var(--color-dark-mode-primary);
+}
+
+body.dark-mode .close-modal:hover {
+    color: var(--color-accent);
+}
+
+body.dark-mode .submitted-data-card li {
+    color: var(--color-light-text);
+    border-bottom: 1px dashed var(--color-dark-gray);
+}
+
+body.dark-mode .submitted-data-card li:last-child {
+    border-bottom: none;
+}
+
+body.dark-mode .submitted-data-card li strong {
+    color: var(--color-dark-mode-primary);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .join-hero-container {
+        height: 300px;
+    }
+
+    .join-hero-content .page-title {
+        font-size: 1.5rem;
+    }
+
+    .join-hero-content p {
+        font-size: 1rem;
+    }
+
+    .join-form-section {
+        padding: 1.5rem;
+    }
+
+    .fieldset-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .section-heading {
+        font-size: 1.1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .membership-info-box {
+        padding: 1.5rem;
+    }
+
+    .section-heading-small {
+        font-size: 1.1rem;
+        margin: -1.5rem -1.5rem 1rem -1.5rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .membership-card {
+        padding: 1rem;
+    }
+
+    .membership-card h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .membership-card .modal-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .join-submit-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet view */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .join-page-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
