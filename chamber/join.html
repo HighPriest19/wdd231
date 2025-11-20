@@ -79,84 +79,90 @@
 
             <div class="join-page-layout">
 
-                <!-- Membership Form -->
-                <section class="join-form-section info-card">
-                    <form method="get" action="thankyou.html" class="membership-form">
+  <!-- Membership Form -->
+<section class="join-form-section info-card">
+    <form method="get" action="thankyou.html" class="membership-form">
 
-                        <fieldset class="form-section">
-                            <legend class="section-heading">Personal Information</legend>
-                            <div class="fieldset-grid">
+        <fieldset class="form-section">
+            <legend class="section-heading">Personal Information</legend>
+            <div class="fieldset-grid">
 
-                                <label class="form-label" for="fname">
-                                    <span class="label-text">First Name*</span>
-                                    <input type="text" id="fname" name="fname" required autocomplete="given-name">
-                                </label>
+                <label class="form-label" for="fname">
+                    <span class="label-text">First Name*</span>
+                    <input type="text" id="fname" name="fname" required autocomplete="given-name"
+                           title="Enter your first name">
+                </label>
 
-                                <label class="form-label" for="lname">
-                                    <span class="label-text">Last Name*</span>
-                                    <input type="text" id="lname" name="lname" required autocomplete="family-name">
-                                </label>
+                <label class="form-label" for="lname">
+                    <span class="label-text">Last Name*</span>
+                    <input type="text" id="lname" name="lname" required autocomplete="family-name"
+                           title="Enter your last name">
+                </label>
 
-                                <label class="form-label" for="email">
-                                    <span class="label-text">Email Address*</span>
-                                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
-                                </label>
+                <label class="form-label" for="email">
+                    <span class="label-text">Email Address*</span>
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                           placeholder="name@example.com" title="Enter your email address">
+                </label>
 
-                                <label class="form-label" for="phone">
-                                    <span class="label-text">Mobile Phone Number*</span>
-                                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
-                                </label>
+                <label class="form-label" for="phone">
+                    <span class="label-text">Mobile Phone Number*</span>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                           title="Enter your mobile phone number">
+                </label>
 
-                                <label class="form-label full-width" for="orgtitle">
-                                    <span class="label-text">Organizational Title*</span>
-                                    <input type="text" id="orgtitle" name="orgtitle" required 
-                                        pattern="[a-zA-Z\\s\\-]{7,}"
-                                        title="At least 7 letters, spaces, or hyphens"
-                                        placeholder="e.g., Chief Executive Officer">
-                                    <small class="error-hint">Must be 7+ letters, spaces, or hyphens.</small>
-                                </label>
+                <label class="form-label full-width" for="orgtitle">
+                    <span class="label-text">Organizational Title*</span>
+                    <input type="text" id="orgtitle" name="orgtitle" required autocomplete="organization-title"
+                           pattern="[a-zA-Z\s\-]{7,}"
+                           title="At least 7 letters, spaces, or hyphens"
+                           placeholder="e.g., Chief Executive Officer">
+                    <small class="error-hint">Must be 7+ letters, spaces, or hyphens.</small>
+                </label>
 
-                            </div>
-                        </fieldset>
+            </div>
+        </fieldset>
 
-                        <fieldset class="form-section">
-                            <legend class="section-heading">Business Information</legend>
-                            <div class="fieldset-grid">
+        <fieldset class="form-section">
+            <legend class="section-heading">Business Information</legend>
+            <div class="fieldset-grid">
 
-                                <label class="form-label" for="orgname">
-                                    <span class="label-text">Business Name*</span>
-                                    <input type="text" id="orgname" name="orgname" required autocomplete="organization">
-                                </label>
+                <label class="form-label" for="orgname">
+                    <span class="label-text">Business Name*</span>
+                    <input type="text" id="orgname" name="orgname" required autocomplete="organization"
+                           title="Enter your organization name">
+                </label>
 
-                                <label class="form-label" for="membership">
-                                    <span class="label-text">Select Membership Level*</span>
-                                    <select id="membership" name="membership" required>
-                                        <option value="" disabled selected>Choose a level...</option>
-                                        <option value="np">NP Membership (Non-Profit - Free)</option>
-                                        <option value="bronze">Bronze Membership</option>
-                                        <option value="silver">Silver Membership</option>
-                                        <option value="gold">Gold Membership</option>
-                                    </select>
-                                </label>
+                <label class="form-label" for="membership">
+                    <span class="label-text">Select Membership Level*</span>
+                    <select id="membership" name="membership" required title="Select a membership level">
+                        <option value="" disabled selected>Choose a level...</option>
+                        <option value="np">NP Membership (Non-Profit - Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
 
-                            </div>
+            </div>
 
-                            <label class="form-label full-width" for="description">
-                                <span class="label-text">Business Description</span>
-                                <textarea id="description" name="description" rows="5" placeholder="Briefly describe your business."></textarea>
-                            </label>
-                        </fieldset>
+            <label class="form-label full-width" for="description">
+                <span class="label-text">Business Description*</span>
+                <textarea id="description" name="description" rows="5"
+                          placeholder="Briefly describe your business."
+                          title="Provide a brief description of your organization" required></textarea>
+            </label>
+        </fieldset>
 
-                        <!-- Hidden Timestamp -->
-                        <input type="hidden" id="timestamp" name="timestamp">
+        <!-- Hidden Timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp">
 
-                        <div class="submit-button-container">
-                            <input type="submit" value="Complete Application" class="cta-button join-submit-btn">
-                        </div>
+        <div class="submit-button-container">
+            <input type="submit" value="Complete Application" class="cta-button join-submit-btn">
+        </div>
 
-                    </form>
-                </section>
-
+    </form>
+</section>
                 <!-- Membership Levels -->
                 <section class="membership-levels-section">
                     <div class="membership-info-box info-card">
