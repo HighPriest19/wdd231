@@ -1,0 +1,3 @@
+#anime-list .cards {
+    grid-template-columns: repeat(3, 1fr);
+}

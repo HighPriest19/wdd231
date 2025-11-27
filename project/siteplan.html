@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Super unique site plan for AnimeVerse Hub">
+<meta name="author" content="Olasunkanmi Hinckley Olagunju">
+<title>AnimeVerse Hub - Site Plan</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<style>
+  :root {
+    --dark-bg: #0D0D0D;
+    --neon-red: #FF0054;
+    --electric-blue: #00FFFF;
+    --light-text: #F2F2F2;
+    --card-bg: #1a1a1a;
+    --shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, var(--neon-red), var(--electric-blue));
+    color: var(--light-text);
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: var(--shadow);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  header h1 { font-size: 2.5rem; }
+  header p { font-size: 1rem; margin-top: 0.5rem; }
+
+  @keyframes glow {
+    0% { text-shadow: 0 0 5px var(--neon-red); }
+    50% { text-shadow: 0 0 20px var(--electric-blue); }
+    100% { text-shadow: 0 0 10px var(--neon-red); }
+  }
+
+  main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 0, 84, 0.7), 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-red);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--electric-blue);
+    padding-bottom: 0.3rem;
+  }
+
+  ul { list-style: none; padding-left: 0; }
+  ul li { margin-bottom: 0.5rem; }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, var(--electric-blue), var(--neon-red));
+    font-family: 'Orbitron', sans-serif;
+    color: var(--light-text);
+    box-shadow: var(--shadow);
+  }
+
+  footer .social a {
+    margin: 0 10px;
+    color: var(--light-text);
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+
+  footer .social a:hover {
+    color: var(--neon-red);
+    transform: scale(1.2);
+  }
+
+  /* Wireframe Mockup Styles */
+  .wireframe-mobile, .wireframe-desktop {
+    background: #111;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .wf-header, .wf-footer, .wf-hero {
+    background: #222;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
+
+  .wf-cards, .wf-cards-desktop {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .wf-card {
+    background: #333;
+    flex: 1;
+    min-width: 30%;
+    height: 80px;
+    border-radius: 6px;
+    text-align: center;
+    color: #aaa;
+    padding-top: 30px;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    main { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    main { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AnimeVerse Hub</h1>
+  <p>Site Plan by Olasunkanmi Hinckley Olagunju</p>
+</header>
+
+<main>
+  <!-- Site Name -->
+  <div class="card">
+    <h2>Site Name</h2>
+    <p><strong>AnimeVerse Hub</strong></p>
+    <p>A futuristic, professional anime review platform with interactive features and unique UI/UX design.</p>
+  </div>
+
+  <!-- Site Purpose -->
+  <div class="card">
+    <h2>Site Purpose</h2>
+    <p>Provides dynamic anime reviews and recommendations with hero carousel, dynamic cards, genre filters, favorites, dark/light mode, and smooth animations.</p>
+  </div>
+
+  <!-- Scenarios -->
+  <div class="card">
+    <h2>Scenarios</h2>
+    <ul>
+      <li>How can I quickly find the top-rated anime of 2025?</li>
+      <li>Can I save my favorite anime to view later?</li>
+      <li>How do I interact with reviews with smooth animations and responsive design?</li>
+    </ul>
+  </div>
+
+  <!-- Color Scheme -->
+  <div class="card">
+    <h2>Color Scheme</h2>
+    <ul>
+      <li>Dark Background: #0D0D0D</li>
+      <li>Neon Red: #FF0054</li>
+      <li>Electric Blue: #00FFFF</li>
+      <li>Soft White: #F2F2F2</li>
+    </ul>
+    <p>Neon glows and gradients are used for interactive elements for a modern anime vibe.</p>
+  </div>
+
+  <!-- Typography -->
+  <div class="card">
+    <h2>Typography</h2>
+    <ul>
+      <li>Headings: Orbitron / Bangers — futuristic anime style</li>
+      <li>Body: Inter / Roboto — readable text</li>
+      <li>Special Elements: Optional pixel/retro fonts for ratings</li>
+    </ul>
+  </div>
+
+  <!-- Wireframe -->
+  <div class="card">
+    <h2>Wireframe</h2>
+    <ul>
+      <li>Hero poster carousel on top</li>
+      <li>Search bar and genre/rating filters</li>
+      <li>Dynamic anime cards grid with hover glow</li>
+      <li>Dark/light mode toggle</li>
+      <li>Footer with neon social icons</li>
+      <li>Responsive layout for mobile & desktop</li>
+    </ul>
+  </div>
+
+  <!-- Additional Features -->
+ <div class="card">
+  <h2>Wireframe (Mockup)</h2>
+
+  <p>Mobile View:</p>
+  <div class="wireframe-mobile">
+    <div class="wf-header">Header</div>
+    <div class="wf-hero">Hero Carousel</div>
+    <div class="wf-cards">
+      <div class="wf-card">Card 1</div>
+      <div class="wf-card">Card 2</div>
+      <div class="wf-card">Card 3</div>
+    </div>
+    <div class="wf-footer">Footer</div>
+  </div>
+
+  <p>Desktop View:</p>
+  <div class="wireframe-desktop">
+    <div class="wf-header">Header</div>
+    <div class="wf-hero">Hero Carousel</div>
+    <div class="wf-cards-desktop">
+      <div class="wf-card">Card 1</div>
+      <div class="wf-card">Card 2</div>
+      <div class="wf-card">Card 3</div>
+      <div class="wf-card">Card 4</div>
+      <div class="wf-card">Card 5</div>
+      <div class="wf-card">Card 6</div>
+    </div>
+    <div class="wf-footer">Footer</div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> AnimeVerse Hub</p>
+  <p>Created by Olasunkanmi Hinckley Olagunju</p>
+  <p>Last Modified: <span id="last-modified"></span></p>
+  <p class="social">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("last-modified").textContent = document.lastModified;
+</script>
+
+</body>
+</html>

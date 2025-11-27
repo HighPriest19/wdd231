@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AnimeVerse Hub - Dynamic Anime Reviews with Super Modern UI/UX">
+<meta name="author" content="Olasunkanmi Hinckley Olagunju">
+<title>AnimeVerse Hub</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>AnimeVerse Hub</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Carousel -->
+<section class="hero">
+  <div class="carousel">
+    <img src="images/aot.JPG" alt="Attack on Titan" class="active">
+    <img src="images/yourname.jpg" alt="Your Name">
+    <video autoplay muted loop class="anime-video">
+      <source src="videos/demon_slayer.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<!-- Search & Filters -->
+<section class="filters">
+  <input type="text" id="search" placeholder="Search anime...">
+  <select id="genre">
+    <option value="All">All Genres</option>
+    <option value="Action">Action</option>
+    <option value="Romance">Romance</option>
+    <option value="Adventure">Adventure</option>
+  </select>
+</section>
+
+<!-- Anime Cards -->
+<section class="cards" id="reviews">
+  <!-- Dynamic anime cards loaded via main.js -->
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; <span id="year"></span> AnimeVerse Hub</p>
+  <p>Created by Olasunkanmi Hinckley Olagunju</p>
+  <div class="social">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

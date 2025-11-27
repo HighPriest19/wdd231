@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Ondo Commerce Hub and apply for membership. Explore membership levels and business growth opportunities.">
+    <meta name="author" content="Hinckley Olagunju">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ondo Commerce Hub - Membership Application">
+    <meta property="og:description" content="Apply to become a member of the Ondo Commerce Hub and unlock new business opportunities.">
+    <meta property="og:image" content="https://highpriest19.github.io/wdd231/chamber/images/business-hero.webp">
+    <meta property="og:url" content="https://highpriest19.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <title>Join - Ondo Commerce Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/och-logo.png" alt="Ondo Commerce Hub Logo" class="logo" loading="lazy">
+                <div class="logo-text">
+                    <h1>Ondo Commerce Hub</h1>
+                    <p class="tagline">Empowering Business Growth</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Change theme">🌓</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="join-hero-container">
+            <img src="images/business-hero.webp" alt="Business professionals collaborating" class="join-hero-image" loading="lazy">
+            <div class="join-hero-overlay">
+                <div class="join-hero-content">
+                    <h2 class="page-title">Membership Application</h2>
+                    <p>Become a part of the Ondo State business community.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="home-container">
+            <div class="join-page-layout">
+
+                <!-- Membership Form -->
+                <section class="join-form-section info-card">
+                    <form method="get" action="thankyou.html" class="membership-form">
+
+                        <!-- Personal Info -->
+                        <fieldset class="form-section">
+                            <legend class="section-heading">Personal Information</legend>
+
+                            <div class="fieldset-grid">
+
+                                <label class="form-label" for="fname">
+                                    <span class="label-text">First Name*</span>
+                                    <input type="text" id="fname" name="fname" required autocomplete="given-name">
+                                </label>
+
+                                <label class="form-label" for="lname">
+                                    <span class="label-text">Last Name*</span>
+                                    <input type="text" id="lname" name="lname" required autocomplete="family-name">
+                                </label>
+
+                                <label class="form-label" for="email">
+                                    <span class="label-text">Email Address*</span>
+                                    <input type="email" id="email" name="email" placeholder="name@example.com" required autocomplete="email">
+                                </label>
+
+                                <label class="form-label" for="phone">
+                                    <span class="label-text">Mobile Phone Number*</span>
+                                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                                </label>
+
+                                <label class="form-label full-width" for="orgtitle">
+                                    <span class="label-text">Organizational Title*</span>
+                                    <input type="text"
+                                           id="orgtitle"
+                                           name="orgtitle"
+                                           placeholder="e.g., Chief Executive Officer"
+                                           required
+                                           autocomplete="organization-title"
+                                           pattern="[a-zA-Z\s\-]{7,}">
+                                    <small class="error-hint">Must be at least 7 characters.</small>
+                                </label>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- Business Info -->
+                        <fieldset class="form-section">
+                            <legend class="section-heading">Business Information</legend>
+
+                            <div class="fieldset-grid">
+
+                                <label class="form-label" for="orgname">
+                                    <span class="label-text">Business Name*</span>
+                                    <input type="text" id="orgname" name="orgname" required autocomplete="organization">
+                                </label>
+
+                                <label class="form-label" for="membership">
+                                    <span class="label-text">Select Membership Level*</span>
+                                    <select id="membership" name="membership" required>
+                                        <option value="" disabled selected>Choose a level...</option>
+                                        <option value="np">NP Membership (Free)</option>
+                                        <option value="bronze">Bronze Membership</option>
+                                        <option value="silver">Silver Membership</option>
+                                        <option value="gold">Gold Membership</option>
+                                    </select>
+                                </label>
+
+                            </div>
+
+                            <label class="form-label full-width" for="description">
+                                <span class="label-text">Business Description*</span>
+                                <textarea id="description" name="description" rows="5" placeholder="Briefly describe your business." required></textarea>
+                            </label>
+                        </fieldset>
+
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <div class="submit-button-container">
+                            <input type="submit" value="Complete Application" class="cta-button join-submit-btn">
+                        </div>
+
+                    </form>
+                </section>
+
+                <!-- Membership Levels -->
+                <section class="membership-levels-section">
+                    <div class="membership-info-box info-card">
+                        <h3 class="section-heading-small">Membership Levels</h3>
+                        <p class="section-intro">Choose the membership tier that fits your business needs.</p>
+
+                        <div class="card-grid">
+
+                            <div class="membership-card np-card">
+                                <h4>NP Membership (Free)</h4>
+                                <button type="button" class="modal-link" data-modal="np-modal">View Benefits</button>
+                            </div>
+
+                            <div class="membership-card bronze-card">
+                                <h4>Bronze (NGN 15,000)</h4>
+                                <button type="button" class="modal-link" data-modal="bronze-modal">View Benefits</button>
+                            </div>
+
+                            <div class="membership-card silver-card">
+                                <h4>Silver (NGN 30,000)</h4>
+                                <button type="button" class="modal-link" data-modal="silver-modal">View Benefits</button>
+                            </div>
+
+                            <div class="membership-card gold-card">
+                                <h4>Gold (NGN 50,000)</h4>
+                                <button type="button" class="modal-link" data-modal="gold-modal">View Benefits</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <dialog id="np-modal" class="membership-modal">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <h3>NP Membership Benefits</h3>
+                <ul>
+                    <li>Free online directory listing</li>
+                    <li>Access to monthly newsletters</li>
+                    <li>Discounted attendance at selected workshops</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="bronze-modal" class="membership-modal">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                    <li>All NP benefits</li>
+                    <li>5% discount on event tickets</li>
+                    <li>Access to business seminars</li>
+                    <li>Quarterly social media spotlight</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="silver-modal" class="membership-modal">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <h3>Silver Membership Benefits</h3>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>10% discount on event tickets</li>
+                    <li>Print directory listing</li>
+                    <li>Exclusive training access</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog id="gold-modal" class="membership-modal">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <h3>Gold Membership Benefits</h3>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>20% event ticket discounts</li>
+                    <li>Homepage gold spotlight</li>
+                    <li>Quarterly newsletter feature</li>
+                    <li>Priority sponsorship opportunities</li>
+                </ul>
+            </div>
+        </dialog>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-section contact-info">
+                <h3>Ondo Commerce Hub</h3>
+                <p>📍 45 Oba Adesida Road, Akure, Ondo State</p>
+                <p>📞 <a href="tel:+2348064567890">+234 806 456 7890</a></p>
+                <p>✉ <a href="mailto:info@ondocommercehub.org">info@ondocommercehub.org</a></p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hinckleyolagunju" target="_blank">
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                    </a>
+                    <a href="https://x.com/hinckleweb3" target="_blank">
+                        <img src="images/twitter-x.svg" alt="Twitter" width="32" height="32">
+                    </a>
+                    <a href="https://www.instagram.com/hinckley.codm" target="_blank">
+                        <img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section project-info">
+                <p><strong>WDD 231 Class Project</strong></p>
+                <p>Hinckley Olagunju</p>
+                <p>&copy; <span id="currentYear"></span> Ondo Commerce Hub</p>
+                <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
