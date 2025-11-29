@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Idanre Hills",
+        "address": "Idanre, Ondo State",
+        "description": "A UNESCO-recognized wonder consisting of over 700 steps, ancient settlements, shrines, and breathtaking panoramic views. One of the most iconic natural attractions in Nigeria.",
+        "image": "images/attractions-1.webp"
+    },
+    {
+        "id": 2,
+        "name": "Araromi Beach",
+        "address": "Ilaje, Ondo State",
+        "description": "A long, peaceful, and pristine coastline stretching along the Atlantic Ocean. Perfect for relaxation, tourism, photography, and seaside adventure.",
+        "image": "images/attractions-2.webp"
+    },
+    {
+        "id": 3,
+        "name": "Owo Museum of Antiquities",
+        "address": "Owo, Ondo State",
+        "description": "A museum housing rare Yoruba and Benin artifacts, showcasing centuries of craftsmanship, bronze works, and traditional art unique to Owo Kingdom.",
+        "image": "images/attractions-3.webp"
+    },
+    {
+        "id": 4,
+        "name": "Cave of Ashes (Iwo Eleru)",
+        "address": "Isarun, Ondo State",
+        "description": "A prehistoric archaeological site where some of the earliest human remains in West Africa were discovered. A significant cultural and scientific landmark.",
+        "image": "images/attracrions-4.webp"
+    },
+    {
+        "id": 5,
+        "name": "Igbo Olodumare Forest",
+        "address": "Oke-Igbo, Ondo State",
+        "description": "A mysterious ancient forest referenced in literature and folklore. Known for its deep greenery, mythical stories, and magical ambiance.",
+        "image": "images/attractions-5.webp"
+    },
+    {
+        "id": 6,
+        "name": "Okitipupa Palm Oil Belt",
+        "address": "Okitipupa, Ondo State",
+        "description": "A commercial zone famous for large-scale palm oil production, offering agro-tourism experiences, processing tours, and insights into Ondo's agricultural strength.",
+        "image": "images/attractions-6.webp"
+    },
+    {
+        "id": 7,
+        "name": "Akure Shopping Mall",
+        "address": "Igbatoro Road, Akure, Ondo State",
+        "description": "A modern retail and leisure center featuring a variety of stores, eateries, and entertainment spots—popular for business meetings and family outings.",
+        "image": "images/attractions-7.webp"
+    },
+    {
+        "id": 8,
+        "name": "Smokey Mountain (Oke-Oromion)",
+        "address": "Idanre-Akure Axis, Ondo State",
+        "description": "A scenic elevated landscape surrounded by misty clouds during certain seasons. Loved by hikers, adventurers, and nature photographers.",
+        "image": "images/attractions-8.webp"
+    }
+]
