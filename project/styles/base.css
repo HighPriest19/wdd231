@@ -78,16 +78,18 @@ header nav a:hover { color: var(--electric-blue); }
   border-radius: 12px;
   box-shadow: 0 0 15px var(--electric-blue), 0 0 25px var(--neon-purple);
 }
-.carousel { position: relative; width: 80%; margin: auto; }
+.carousel { position: relative; width: 80%; height: 100%; margin: auto; }
 .carousel img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensure images fill the carousel area uniformly */
   border-radius: 12px;
   display: none;
   box-shadow: 0 0 15px var(--electric-blue), 0 0 25px var(--neon-purple);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .carousel img.active { display: block; }
-.carousel img:hover { transform: scale(1.05); }
+.carousel img:hover { transform: scale(1.03); }
 
 /* Filters */
 .filters {
