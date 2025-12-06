@@ -1,8 +1,8 @@
 [
-  { "title": "Attack on Titan", "genre": "Action", "rating": 9.5, "year": 2013, "poster": "images/aot.jpg" },
-  { "title": "Demon Slayer", "genre": "Action", "rating": 9.0, "year": 2019, "poster": "images/demonslayer.jpg" },
+  { "title": "Attack on Titan", "genre": "Action", "rating": 9.5, "year": 2013, "poster": "images/aot.JPG" },
+  { "title": "Demon Slayer", "genre": "Action", "rating": 9.0, "year": 2019, "poster": "images/demonslayer.JPG" },
   { "title": "Your Name", "genre": "Romance", "rating": 8.8, "year": 2016, "poster": "images/yourname.jpg" },
-  { "title": "Naruto", "genre": "Action", "rating": 8.5, "year": 2002, "poster": "images/naruto.jpg" },
-  { "title": "One Piece", "genre": "Adventure", "rating": 9.2, "year": 1999, "poster": "images/onepiece.jpg" },
-  { "title": "My Hero Academia", "genre": "Action", "rating": 9.1, "year": 2016, "poster": "images/mha.jpg" }
+  { "title": "Naruto", "genre": "Action", "rating": 8.5, "year": 2002, "poster": "images/naruto.JPG" },
+  { "title": "One Piece", "genre": "Adventure", "rating": 9.2, "year": 1999, "poster": "images/onepiece.JPG" },
+  { "title": "My Hero Academia", "genre": "Action", "rating": 9.1, "year": 2016, "poster": "images/mha.JPG" }
 ]
