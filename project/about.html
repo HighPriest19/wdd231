@@ -3,11 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <meta name="description" content="Learn about AnimeVerse Hub — our mission, features, and dedication to anime fans worldwide.">
+  <meta name="author" content="Olasunkanmi Hinckley Olagunju">
+
   <title>About — AnimeVerse Hub</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About AnimeVerse Hub">
+  <meta property="og:description" content="Discover the mission of AnimeVerse Hub, a platform built for anime guides, reviews, and an immersive modern experience.">
+  <meta property="og:image" content="https://highpriest19.github.io/images/onepiece.jpg">
+  <meta property="og:url" content="https://highpriest19.github.io/about.html">
 
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/large.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body class="siteplan">
@@ -17,7 +34,7 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="reviews.html">Reviews</a></li>
     </ul>
   </nav>
@@ -25,29 +42,27 @@
 
 <section class="hero">
   <h1>About AnimeVerse Hub</h1>
-  <p>We curate reviews, recommendations and guides for anime fans.</p>
+  <p>We curate reviews, recommendations, and character guides for anime fans.</p>
 </section>
 
 <main>
   <section class="about card">
-
     <h2>Our Mission</h2>
     <p>
-      AnimeVerse Hub brings honest reviews and helpful guides with a modern,
-      immersive UI powered by neon gradients and smooth interactions.
+      AnimeVerse Hub aims to bring together honest reviews and useful guides for
+      anime fans. We focus on readability, fast discovery, and a modern, immersive UI.
     </p>
 
     <h2>What We Offer</h2>
     <ul>
-      <li>Community reviews</li>
-      <li>Favorites & watchlists</li>
-      <li>Genre/rating search</li>
-      <li>Responsive neon UI</li>
+      <li>Staff and community reviews</li>
+      <li>Favorites and watchlists</li>
+      <li>Search and filter by genre and rating</li>
+      <li>Responsive layout and accessible design</li>
     </ul>
 
     <h2>Credits</h2>
-    <p>Created by Olasunkanmi Hinckley Olagunju.</p>
-
+    <p>Created by Olasunkanmi Hinckley Olagunju (Hinckley).</p>
   </section>
 </main>
 
@@ -56,11 +71,6 @@
   <p>Last Modified: <span id="last-modified"></span></p>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
-</script>
-
+<script src="scripts/main.js" defer></script>
 </body>
 </html>
-

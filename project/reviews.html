@@ -3,11 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <meta name="description" content="Read and submit anime reviews from the AnimeVerse Hub community.">
+  <meta name="author" content="Olasunkanmi Hinckley Olagunju">
+
   <title>Reviews — AnimeVerse Hub</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Anime Reviews — AnimeVerse Hub">
+  <meta property="og:description" content="Read community and staff reviews on your favorite anime, and share your own opinions.">
+  <meta property="og:image" content="https://highpriest19.github.io/images/onepiece.jpg">
+  <meta property="og:url" content="https://highpriest19.github.io/reviews.html">
 
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/large.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body class="siteplan">
@@ -18,43 +35,45 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="active" href="reviews.html">Reviews</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
     </ul>
   </nav>
 </header>
 
 <section class="hero">
   <h1>Community Reviews</h1>
-  <p>Read honest reviews from fans and staff.</p>
+  <p>Read honest reviews from the community and staff.</p>
 </section>
 
 <main>
 
-<section class="card">
-  <h2>Latest Reviews</h2>
-  <div id="reviews-container"></div>
-</section>
+  <section class="card">
+    <h2>Latest Reviews</h2>
+    <div id="reviews-container"></div>
+  </section>
 
-<section class="card">
-  <h2>Submit a Review</h2>
+  <section class="card">
+    <h2>Submit a Review (Demo)</h2>
 
-  <form id="review-form">
-    <label>Title
-      <input type="text" id="r-title" required>
-    </label>
+    <form id="review-form">
+      <label>
+        Title<br>
+        <input type="text" id="r-title" required>
+      </label><br>
 
-    <label>Rating
-      <input type="text" id="r-rating" placeholder="e.g. 8.5/10" required>
-    </label>
+      <label>
+        Rating<br>
+        <input type="text" id="r-rating" placeholder="e.g. 8.5/10" required>
+      </label><br>
 
-    <label>Review
-      <textarea id="r-content" rows="4" required></textarea>
-    </label>
+      <label>
+        Review<br>
+        <textarea id="r-content" rows="4" required></textarea>
+      </label><br>
 
-    <button class="btn" type="submit">Submit</button>
-  </form>
-
-</section>
+      <button type="submit" class="btn">Submit Review</button>
+    </form>
+  </section>
 
 </main>
 
@@ -63,29 +82,29 @@
   <p>Last Modified: <span id="last-modified"></span></p>
 </footer>
 
+<script src="scripts/main.js" defer></script>
+
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('review-form');
+  const container = document.getElementById('reviews-container');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("review-form");
-  const container = document.getElementById("reviews-container");
-
-  form.addEventListener("submit", (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const title = document.getElementById('r-title').value.trim();
+    const rating = document.getElementById('r-rating').value.trim();
+    const content = document.getElementById('r-content').value.trim();
 
-    const title = r-title.value;
-    const rating = r-rating.value;
-    const content = r-content.value;
-    const date = new Date().toLocaleDateString();
+    const card = document.createElement('article');
+    card.className = 'review-card';
+    const now = new Date().toLocaleDateString();
 
-    const card = document.createElement("article");
-    card.className = "review-card";
     card.innerHTML = `
-      <h3>${title} <span class="rev-meta">— You · ${date}</span></h3>
-      <p class="rev-rating">Rating: <strong>${rating}</strong></p>
-      <p>${content}</p>
+        <h3>${title} <span class="rev-meta">— You · ${now}</span></h3>
+        <p class="rev-rating">Rating: <strong>${rating}</strong></p>
+        <p>${content}</p>
     `;
+
     container.prepend(card);
     form.reset();
   });

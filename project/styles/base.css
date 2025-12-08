@@ -71,7 +71,8 @@ nav a.active {
 .hero {
     padding: 6rem 5%;
     text-align: center;
-    background: url("../images/onepiece.JPG") center/cover no-repeat, radial-gradient(circle at center, rgba(255,0,84,0.25), transparent 70%);
+    background: url("../images/onepiece.JPG") center/cover no-repeat,
+                radial-gradient(circle at center, rgba(255,0,84,0.25), transparent 70%);
     color: var(--soft-white);
 }
 
@@ -124,7 +125,8 @@ nav a.active {
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 20px rgba(255,0,84,0.4), 0 0 30px rgba(0,255,255,0.3);
+    box-shadow: 0 0 20px rgba(255,0,84,0.4), 
+                0 0 30px rgba(0,255,255,0.3);
 }
 
 .card img {
@@ -185,7 +187,10 @@ form input, form textarea {
     padding: 0.6rem;
     border-radius: 8px;
 }
-form label { display: block; margin-bottom: 0.3rem; }
+form label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
 
 /* =======================
    FOOTER
@@ -199,8 +204,7 @@ footer {
 }
 
 /* =======================
-   HEADER OVERLAY (Hero overlay style)
-   Applied when pages use `body.siteplan` so header sits on top of hero.
+   HEADER OVERLAY (Siteplan Hero)
 ======================= */
 body.siteplan header {
     position: fixed;
@@ -217,5 +221,7 @@ body.siteplan header {
 body.siteplan header .logo { color: var(--soft-white); }
 body.siteplan nav a { color: rgba(255,255,255,0.95); }
 
-/* add extra top space so the hero content isn't obscured by the fixed header */
-body.siteplan .hero { padding-top: calc(6rem + 72px); }
+/* FIXED HERO SPACING */
+body.siteplan .hero {
+    padding-top: calc(3rem + 72px);
+}

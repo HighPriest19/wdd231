@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- SEO -->
+    <meta name="description" content="Discover popular anime shows, character profiles, and reviews — all in a clean and easy-to-navigate hub for anime fans.">
+    <meta name="author" content="Olasunkanmi Hinckley Olagunju">
+
     <title>Anime Watch Hub – Explore Anime, Characters & Reviews</title>
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anime Watch Hub – Explore Anime & Reviews">
+    <meta property="og:description" content="Dive into featured anime, character profiles, and community reviews in a simple and fan-friendly hub.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://highpriest19.github.io/images/onepiece.jpg">
+    <meta property="og:url" content="https://highpriest19.github.io/index.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body class="siteplan">
@@ -16,8 +39,8 @@
     <div class="logo">Anime Watch Hub</div>
     <nav>
         <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
             <li><a href="reviews.html">Reviews</a></li>
         </ul>
     </nav>
@@ -30,60 +53,59 @@
 </section>
 
 <main>
+    <section class="featured">
+        <h2>Featured Anime</h2>
+        <div class="cards">
 
-<section class="featured">
-    <h2>Featured Anime</h2>
+            <div class="card">
+                <img src="images/aot.JPG" alt="Attack on Titan anime poster">
+                <h3>Attack on Titan</h3>
+                <p>A battle between humanity and titans — full of action and mystery.</p>
+            </div>
 
-    <div class="cards">
+            <div class="card">
+                <img src="images/demonslayer.JPG" alt="Demon Slayer cover">
+                <h3>Demon Slayer</h3>
+                <p>Follow Tanjiro on his journey to save his sister and fight demons.</p>
+            </div>
 
-        <div class="card">
-            <img src="images/aot.JPG" alt="Attack on Titan">
-            <h3>Attack on Titan</h3>
-            <p>Intense battles between humanity and titans.</p>
+            <div class="card">
+                <img src="images/onepiece.JPG" alt="One Piece anime artwork" loading="lazy">
+                <h3>One Piece</h3>
+                <p>Pirates, epic adventures, and the quest for the legendary treasure.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/naruto.JPG" alt="Naruto anime artwork" loading="lazy">
+                <h3>Naruto</h3>
+                <p>Ninja journeys, intense rivalry, and the pursuit of becoming Hokage.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/mha.JPG" alt="My Hero Academia anime artwork" loading="lazy">
+                <h3>My Hero Academia</h3>
+                <p>Superpowers, heroic battles, and the journey of young aspiring heroes.</p>
+            </div>
+
         </div>
+    </section>
 
-        <div class="card">
-            <img src="images/demonslayer.JPG" alt="">
-            <h3>Demon Slayer</h3>
-            <p>Tanjiro's fight to save his sister and defeat demons.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/onepiece.JPG" alt="">
-            <h3>One Piece</h3>
-            <p>Pirates, adventures, and the legendary treasure.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/naruto.JPG" alt="">
-            <h3>Naruto</h3>
-            <p>Ninja rivalry and the dream of becoming Hokage.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/mha.JPG" alt="">
-            <h3>My Hero Academia</h3>
-            <p>Superpowers, heroes, and high-stakes training.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="about">
-    <h2>About Us</h2>
-    <p>
-        Anime Watch Hub helps fans discover anime shows, explore characters,
-        and read honest reviews — all with a clean and modern neon UI.
-    </p>
-</section>
-
+    <section class="about">
+        <h2>About Us</h2>
+        <p>
+            Anime Watch Hub helps fans discover anime shows, explore characters,
+            and read honest reviews. Everything is designed to be simple, clean,
+            and easy to navigate.
+        </p>
+    </section>
 </main>
 
 <footer>
-    <p>&copy; <span id="year"></span> Anime Watch Hub | Designed by Hinckley — Last modified: <span id="last-modified"></span></p>
+    <p>&copy; 2025 Anime Watch Hub | Designed by Hinckley</p>
 </footer>
 
-</body>
+<!-- JS at the correct position -->
+<script src="scripts/main.js" defer></script>
 
-<script src="scripts/main.js"></script>
+</body>
 </html>
