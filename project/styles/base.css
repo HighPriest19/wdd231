@@ -1,161 +1,221 @@
-:root {
-  --dark-bg: #0D0D0D;
-  --electric-blue: #00FFFF;
-  --neon-purple: #9D00FF;
-  --light-text: #F2F2F2;
-  --card-bg: #1a1a1a;
+/* =======================
+   RESET + BASE
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--dark-bg);
-  color: var(--light-text);
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background: #0d0d0d;
+    color: #f2f2f2;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Header Glow */
+/* =======================
+   THEME VARIABLES
+======================= */
+:root {
+    --dark-bg: #0D0D0D;
+    --neon-red: #FF0054;
+    --electric-blue: #00FFFF;
+    --soft-white: #F2F2F2;
+    --muted: #9aa0a6;
+    --card-bg: #111216;
+    --glass: rgba(255,255,255,0.05);
+    --shadow-lg: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* =======================
+   HEADERS
+======================= */
 header {
-  text-align: center;
-  padding: 2rem;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(90deg, var(--electric-blue), var(--neon-purple));
-  border-radius: 12px;
-  box-shadow: 0 0 20px var(--electric-blue), 0 0 30px var(--neon-purple);
-  margin: 1rem;
+    background: linear-gradient(90deg, var(--neon-red), var(--electric-blue));
+    box-shadow: var(--shadow-lg);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  color: var(--electric-blue);
-  text-shadow:
-    0 0 5px var(--electric-blue),
-    0 0 15px var(--electric-blue),
-    0 0 30px var(--neon-purple),
-    0 0 60px var(--neon-purple);
-  animation: neon-glow 2s ease-in-out infinite alternate;
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--soft-white);
 }
 
-@keyframes neon-glow {
-  0% { text-shadow: 0 0 5px var(--electric-blue),0 0 15px var(--electric-blue),0 0 30px var(--neon-purple),0 0 60px var(--neon-purple); }
-  50% { text-shadow: 0 0 10px var(--electric-blue),0 0 25px var(--electric-blue),0 0 40px var(--neon-purple),0 0 80px var(--neon-purple); }
-  100% { text-shadow: 0 0 5px var(--electric-blue),0 0 15px var(--electric-blue),0 0 30px var(--neon-purple),0 0 60px var(--neon-purple); }
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
 }
 
-header nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-header nav a {
-  text-decoration: none;
-  color: var(--light-text);
-  font-weight: bold;
-  transition: 0.3s;
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid white;
 }
 
-header nav a:hover { color: var(--electric-blue); }
-
-/* Hero Carousel */
+/* =======================
+   HERO SECTION
+======================= */
 .hero {
-  position: relative;
-  width: 100%;
-  height: 500px; /* same as our previous banner height */
-  overflow: hidden;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 1200px;
+    padding: 6rem 5%;
+    text-align: center;
+    background: url("../images/onepiece.JPG") center/cover no-repeat, radial-gradient(circle at center, rgba(255,0,84,0.25), transparent 70%);
+    color: var(--soft-white);
 }
 
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* keeps video filling the box nicely */
-  border-radius: 12px;
-  box-shadow: 0 0 15px var(--electric-blue), 0 0 25px var(--neon-purple);
-}
-.carousel { position: relative; width: 80%; height: 100%; margin: auto; }
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ensure images fill the carousel area uniformly */
-  border-radius: 12px;
-  display: none;
-  box-shadow: 0 0 15px var(--electric-blue), 0 0 25px var(--neon-purple);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.carousel img.active { display: block; }
-.carousel img:hover { transform: scale(1.03); }
-
-/* Filters */
-.filters {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-.filters input, .filters select {
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 2px solid var(--electric-blue);
-  background: #111;
-  color: var(--light-text);
-  box-shadow: 0 0 5px var(--electric-blue), 0 0 10px var(--neon-purple);
-  transition: 0.3s;
-}
-.filters input:focus, .filters select:focus {
-  outline: none;
-  border-color: var(--neon-purple);
-  box-shadow: 0 0 15px var(--electric-blue), 0 0 25px var(--neon-purple);
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
 }
 
-/* Cards Grid */
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    background: var(--neon-red);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* =======================
+   CARDS + GRID
+======================= */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem 5%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.cards .card {
-  background: var(--card-bg);
-  padding: 1rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.cards .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,255,255,0.7),0 0 15px rgba(157,0,255,0.5),0 0 25px rgba(0,255,255,0.6);
-}
-.cards img.poster {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), var(--card-bg));
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 1.3rem;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 0 0 rgba(255,0,84,0);
 }
 
-/* Footer */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(255,0,84,0.4), 0 0 30px rgba(0,255,255,0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 0.8rem;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--electric-blue);
+}
+
+/* =======================
+   ABOUT
+======================= */
+.about {
+    padding: 3rem 5%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-red);
+    margin-bottom: 1rem;
+}
+
+/* =======================
+   REVIEW CARDS
+======================= */
+.review-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), #0f1113);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.rev-meta {
+    color: var(--muted);
+}
+
+.rev-rating {
+    margin-bottom: 0.5rem;
+    color: var(--electric-blue);
+}
+
+/* =======================
+   FORM
+======================= */
+form input, form textarea {
+    width: 100%;
+    background: #1a1b1f;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    padding: 0.6rem;
+    border-radius: 8px;
+}
+form label { display: block; margin-bottom: 0.3rem; }
+
+/* =======================
+   FOOTER
+======================= */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(90deg, var(--neon-purple), var(--electric-blue));
-  border-radius: 12px;
-  box-shadow: 0 0 20px var(--neon-purple), 0 0 30px var(--electric-blue);
-  margin: 1rem;
+    margin-top: 2rem;
+    background: #111;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--soft-white);
 }
 
-footer .social a {
-  margin: 0 10px;
-  color: var(--light-text);
-  font-size: 1.5rem;
-  transition: 0.3s;
+/* =======================
+   HEADER OVERLAY (Hero overlay style)
+   Applied when pages use `body.siteplan` so header sits on top of hero.
+======================= */
+body.siteplan header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(13,13,13,0.18);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 1rem 5%;
+    z-index: 100;
 }
-footer .social a:hover {
-  color: var(--electric-blue);
-  text-shadow: 0 0 10px var(--electric-blue), 0 0 20px var(--neon-purple);
-  transform: scale(1.3);
-}
+
+body.siteplan header .logo { color: var(--soft-white); }
+body.siteplan nav a { color: rgba(255,255,255,0.95); }
+
+/* add extra top space so the hero content isn't obscured by the fixed header */
+body.siteplan .hero { padding-top: calc(6rem + 72px); }

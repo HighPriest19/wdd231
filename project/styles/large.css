@@ -1,3 +1,55 @@
-#anime-list .cards {
-    grid-template-columns: repeat(3, 1fr);
+/* ===========================
+   GLOBAL LAYOUT
+=========================== */
+
+header {
+    padding: 1rem 5%;
+}
+
+.hero {
+    padding: 7rem 5%;
+}
+
+/* FEATURED GRID */
+.featured {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.featured h2 {
+    font-family: 'Orbitron';
+    color: var(--electric-blue);
+    margin-bottom: 2rem;
+}
+
+/* ===========================
+   ABOUT PAGE
+=========================== */
+.about.card {
+    text-align: left;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 4rem 5%;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero {
+        padding: 8rem 5%;
+    }
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — AnimeVerse Hub</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body class="siteplan">
+
+<header>
+  <div class="logo">AnimeVerse Hub</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="about.html">About</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>About AnimeVerse Hub</h1>
+  <p>We curate reviews, recommendations and guides for anime fans.</p>
+</section>
+
+<main>
+  <section class="about card">
+
+    <h2>Our Mission</h2>
+    <p>
+      AnimeVerse Hub brings honest reviews and helpful guides with a modern,
+      immersive UI powered by neon gradients and smooth interactions.
+    </p>
+
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Community reviews</li>
+      <li>Favorites & watchlists</li>
+      <li>Genre/rating search</li>
+      <li>Responsive neon UI</li>
+    </ul>
+
+    <h2>Credits</h2>
+    <p>Created by Olasunkanmi Hinckley Olagunju.</p>
+
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> AnimeVerse Hub</p>
+  <p>Last Modified: <span id="last-modified"></span></p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("last-modified").textContent = document.lastModified;
+</script>
+
+</body>
+</html>
+

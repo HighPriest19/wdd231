@@ -14,149 +14,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- CSS -->
-<style>
-  :root {
-    --dark-bg: #0D0D0D;
-    --neon-red: #FF0054;
-    --electric-blue: #00FFFF;
-    --light-text: #F2F2F2;
-    --card-bg: #1a1a1a;
-    --shadow: 0 5px 15px rgba(0,0,0,0.5);
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--dark-bg);
-    color: var(--light-text);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: linear-gradient(90deg, var(--neon-red), var(--electric-blue));
-    color: var(--light-text);
-    font-family: 'Orbitron', sans-serif;
-    box-shadow: var(--shadow);
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  header h1 { font-size: 2.5rem; }
-  header p { font-size: 1rem; margin-top: 0.5rem; }
-
-  @keyframes glow {
-    0% { text-shadow: 0 0 5px var(--neon-red); }
-    50% { text-shadow: 0 0 20px var(--electric-blue); }
-    100% { text-shadow: 0 0 10px var(--neon-red); }
-  }
-
-  main {
-    display: grid;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(255, 0, 84, 0.7), 0 0 15px rgba(0, 255, 255, 0.5);
-  }
-
-  h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--neon-red);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--electric-blue);
-    padding-bottom: 0.3rem;
-  }
-
-  ul { list-style: none; padding-left: 0; }
-  ul li { margin-bottom: 0.5rem; }
-
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: linear-gradient(90deg, var(--electric-blue), var(--neon-red));
-    font-family: 'Orbitron', sans-serif;
-    color: var(--light-text);
-    box-shadow: var(--shadow);
-  }
-
-  footer .social a {
-    margin: 0 10px;
-    color: var(--light-text);
-    font-size: 1.5rem;
-    transition: 0.3s;
-  }
-
-  footer .social a:hover {
-    color: var(--neon-red);
-    transform: scale(1.2);
-  }
-
-  /* Wireframe Mockup Styles */
-  .wireframe-mobile, .wireframe-desktop {
-    background: #111;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
-
-  .wf-header, .wf-footer, .wf-hero {
-    background: #222;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    color: #aaa;
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-  }
-
-  .wf-cards, .wf-cards-desktop {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .wf-card {
-    background: #333;
-    flex: 1;
-    min-width: 30%;
-    height: 80px;
-    border-radius: 6px;
-    text-align: center;
-    color: #aaa;
-    padding-top: 30px;
-    font-size: 0.9rem;
-  }
-
-  @media (min-width: 768px) {
-    main { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (min-width: 1024px) {
-    main { grid-template-columns: repeat(3, 1fr); }
-  }
-</style>
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/large.css">
 </head>
-<body>
+<body class="siteplan">
 
 <header>
   <h1>AnimeVerse Hub</h1>
   <p>Site Plan by Olasunkanmi Hinckley Olagunju</p>
 </header>
-
+ 
 <main>
   <!-- Site Name -->
   <div class="card">

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reviews — AnimeVerse Hub</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body class="siteplan">
+
+<header>
+  <div class="logo">AnimeVerse Hub</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="reviews.html">Reviews</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Community Reviews</h1>
+  <p>Read honest reviews from fans and staff.</p>
+</section>
+
+<main>
+
+<section class="card">
+  <h2>Latest Reviews</h2>
+  <div id="reviews-container"></div>
+</section>
+
+<section class="card">
+  <h2>Submit a Review</h2>
+
+  <form id="review-form">
+    <label>Title
+      <input type="text" id="r-title" required>
+    </label>
+
+    <label>Rating
+      <input type="text" id="r-rating" placeholder="e.g. 8.5/10" required>
+    </label>
+
+    <label>Review
+      <textarea id="r-content" rows="4" required></textarea>
+    </label>
+
+    <button class="btn" type="submit">Submit</button>
+  </form>
+
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> AnimeVerse Hub</p>
+  <p>Last Modified: <span id="last-modified"></span></p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("last-modified").textContent = document.lastModified;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("review-form");
+  const container = document.getElementById("reviews-container");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const title = r-title.value;
+    const rating = r-rating.value;
+    const content = r-content.value;
+    const date = new Date().toLocaleDateString();
+
+    const card = document.createElement("article");
+    card.className = "review-card";
+    card.innerHTML = `
+      <h3>${title} <span class="rev-meta">— You · ${date}</span></h3>
+      <p class="rev-rating">Rating: <strong>${rating}</strong></p>
+      <p>${content}</p>
+    `;
+    container.prepend(card);
+    form.reset();
+  });
+});
+</script>
+
+</body>
+</html>

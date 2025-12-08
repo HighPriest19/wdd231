@@ -1,54 +1,88 @@
-const cardsContainer = document.querySelector(".cards");
-const searchInput = document.getElementById("search");
-const genreSelect = document.getElementById("genre");
-let animeData = [];
+// Safer footer / year handling and page helpers
+document.addEventListener("DOMContentLoaded", () => {
+    const yearEl = document.getElementById("year");
+    const altFooterP = document.querySelector("footer p");
 
-// Fetch JSON data
-fetch("data/anime.json")
-  .then(res => res.json())
-  .then(data => {
-    animeData = data;
-    displayCards(animeData);
-  });
+    const year = new Date().getFullYear();
+    if (yearEl) {
+        yearEl.textContent = year;
+    } else if (altFooterP) {
+        altFooterP.innerHTML = `&copy; ${year} Hinckley Anime Reviews`;
+    }
 
-function displayCards(data) {
-  cardsContainer.innerHTML = "";
-  data.forEach(anime => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
-      <img src="${anime.poster}" alt="${anime.title}" class="poster">
-      <h3>${anime.title}</h3>
-      <p>Genre: ${anime.genre}</p>
-      <p>Rating: ${anime.rating}</p>
-      <p>Year: ${anime.year}</p>
-    `;
-    cardsContainer.appendChild(card);
-  });
+    const lastModEl = document.getElementById("last-modified");
+    if (lastModEl) lastModEl.textContent = document.lastModified;
+});
+
+// Load Anime JSON into pages that have #anime-container
+async function loadAnime() {
+    const container = document.getElementById("anime-container");
+    if (!container) return; // Page doesn't have anime grid
+
+    try {
+        // try the main file first, fall back to anime_fixed.json if needed
+        let response = await fetch("data/anime.json");
+        let data;
+        try {
+            data = await response.json();
+        } catch (e) {
+            // fallback
+            const r2 = await fetch("data/anime_fixed.json");
+            data = await r2.json();
+        }
+        const list = data.animes || [];
+
+        list.forEach(anime => {
+            const card = document.createElement("div");
+            card.classList.add("anime-card");
+
+            card.innerHTML = `
+                <img src="${anime.image}" alt="${anime.title}">
+                <h3>${anime.title}</h3>
+                <p><strong>Year:</strong> ${anime.year}</p>
+                <p><strong>Rating:</strong> ${anime.rating}</p>
+            `;
+
+            container.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error("Error loading anime.json:", error);
+    }
 }
 
-// Filter functionality
-searchInput.addEventListener("input", () => {
-  const filtered = animeData.filter(a =>
-    a.title.toLowerCase().includes(searchInput.value.toLowerCase()) &&
-    (genreSelect.value === "All" || a.genre === genreSelect.value)
-  );
-  displayCards(filtered);
-});
+// Load reviews JSON into pages that have #reviews-container
+async function loadReviews() {
+    const container = document.getElementById("reviews-container");
+    if (!container) return;
 
-genreSelect.addEventListener("change", () => {
-  const filtered = animeData.filter(a =>
-    a.title.toLowerCase().includes(searchInput.value.toLowerCase()) &&
-    (genreSelect.value === "All" || a.genre === genreSelect.value)
-  );
-  displayCards(filtered);
-});
+    try {
+        const response = await fetch("data/reviews.json");
+        const data = await response.json();
+        const list = data.reviews || [];
 
-// Simple carousel auto-slide
-let currentIndex = 0;
-const slides = document.querySelectorAll(".carousel img");
-setInterval(() => {
-  slides[currentIndex].classList.remove("active");
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].classList.add("active");
-}, 4000);
+        if (list.length === 0) {
+            container.innerHTML = '<p>No reviews yet. Be the first to add one!</p>';
+            return;
+        }
+
+        list.forEach(r => {
+            const card = document.createElement('article');
+            card.className = 'review-card';
+            card.innerHTML = `
+                <h3>${r.title} <span class="rev-meta">— ${r.author} · ${r.date}</span></h3>
+                <p class="rev-rating">Rating: <strong>${r.rating}</strong></p>
+                <p>${r.content}</p>
+            `;
+            container.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error('Error loading reviews.json:', error);
+        container.innerHTML = '<p>Error loading reviews.</p>';
+    }
+}
+
+// Initialize loaders; each function checks for its target container
+loadAnime();
+loadReviews();
