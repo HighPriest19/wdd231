@@ -71,7 +71,7 @@ nav a.active {
 .hero {
     padding: 6rem 5%;
     text-align: center;
-    background: url("../images/onepiece.JPG") center/cover no-repeat,
+    background: url("../images/onepiece.webp") center/cover no-repeat,
                 radial-gradient(circle at center, rgba(255,0,84,0.25), transparent 70%);
     color: var(--soft-white);
 }

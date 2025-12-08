@@ -2,7 +2,7 @@
   "animes": [
     {
       "title": "Attack on Titan",
-      "image": "images/aot.jpg",
+      "image": "images/aot.JPG",
       "year": 2013,
       "rating": "9.1/10"
     },
@@ -14,25 +14,25 @@
     },
     {
       "title": "My Hero Academia",
-      "image": "images/mha.jpg",
+      "image": "images/mha.JPG",
       "year": 2016,
       "rating": "8.4/10"
     },
     {
       "title": "Naruto",
-      "image": "images/naruto.jpg",
+      "image": "images/naruto.JPG",
       "year": 2002,
       "rating": "8.0/10"
     },
     {
       "title": "One Piece",
-      "image": "images/onepiece.jpg",
+      "image": "images/onepiece.JPG",
       "year": 1999,
       "rating": "9.3/10"
     },
     {
       "title": "Demon Slayer",
-      "image": "images/demonslayer.jpg",
+      "image": "images/demonslayer.JPG",
       "year": 2019,
       "rating": "8.7/10"
     }
